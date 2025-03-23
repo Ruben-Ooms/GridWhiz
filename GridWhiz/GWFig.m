@@ -124,7 +124,7 @@ classdef GWFig<handle
                  'VerticalAlignment','middle',...
                  'FontSize',obj.FontSize);
             obj.DisplaySolsHandles(end+1)=t;
-            for k=1:1:length(obj.DisplayCans)
+            for k=1:1:size(obj.DisplayCans,2)
                  if(obj.DisplayCans(1,k)==i...
                         && obj.DisplayCans(2,k)==j...
                         && obj.DisplayCans(3,k)==n)
@@ -173,6 +173,11 @@ classdef GWFig<handle
                     end
                 end
             end
+            tempIndicies=find(obj.DisplayCans(1,:)==0);
+            for i=1:1:length(tempIndicies)
+                obj.DisplayCans(:,tempIndicies(1))=[];
+                obj.DisplayCansHandles(tempIndicies(1))=[];
+            end
         end
 
         function updateCandidatesText(obj)
@@ -196,6 +201,9 @@ classdef GWFig<handle
 
         function removeCans(obj,i,j,n)
             % find the candidates display object and delete it
+            if isempty(n)
+                return
+            end
             l=1;
             k=1;
             while k<=size(obj.DisplayCans,2)
