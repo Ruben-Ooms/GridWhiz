@@ -125,7 +125,7 @@ elseif difficulty=="extreme"
             0 0 5 0 2 3 4 1 0
         ];
     elseif num==5
-        % EXTREME PUZZLE 4
+        % EXTREME PUZZLE 5
         board=[
             4 0 0 5 0 0 3 7 0
             3 2 0 0 0 0 0 0 4
