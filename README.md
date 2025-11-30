@@ -1,7 +1,17 @@
 # GridWhiz
 GridWhiz is a Sudoku solver using human like solving techniques to verify the solvability of Sudoku puzzles.
 
-I am currently working on it as a project in COSC 3389, Software Engineering 1 at Tarleton State University.
+This was a project for COSC 3389, Software Engineering 1 at Tarleton State University.
+
+Implemented Algorithms:
+- Last free cell
+- Last remaining cell
+- Last possilbe number
+- Obvious singles
+- ObviousPairs
+- Obvious Triples
+- Hidden singles
+- Hidden pairs
 
 ## Images
 
